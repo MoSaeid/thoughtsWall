@@ -1,0 +1,17 @@
+<%- include('partials/header') %>
+<div class="container">
+   <div class="card text-center">
+      <div class="card-header">
+         <%=tpost_data.tags%>
+      </div>
+      <div class="card-body">
+         <h5 class="card-title"><%=tpost_data.title%></h5>
+         <p class="card-text"><%=tpost_data.tpostBody%>
+         </p>
+      </div>
+      <div class="card-footer text-muted">
+         Published at: <%=tpost_data.date%>
+      </div>
+   </div>
+</div>
+<%- include('partials/footer') %>

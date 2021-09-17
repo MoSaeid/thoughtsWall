@@ -1,0 +1,28 @@
+{
+  "name": "thoughtswall",
+  "version": "0.0.1",
+  "description": "thoughtsWall is make random people share their thoughts and ideas with tags",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoSaeid/thoughtsWall.git"
+  },
+  "keywords": [
+    "wall"
+  ],
+  "author": "Mohammed Z. Saeid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MoSaeid/thoughtsWall/issues"
+  },
+  "homepage": "https://github.com/MoSaeid/thoughtsWall#readme",
+  "dependencies": {
+    "bad-words": "^3.0.4",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.9"
+  }
+}

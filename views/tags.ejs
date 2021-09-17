@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<div class="container">
+<% for (const element of tagsArray) { %>
+  
+  <div class="card text-center">
+  <div class="card-body">
+    <a href="/tags/<%= element %>" class="btn btn-outline-primary"><%= element.toUpperCase() %></a>
+  </div>
+
+</div>
+<% } %>
+</div>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+<br>
+<div class="container">
+	<form method="POST" action="/wall">
+
+	<div class="input-group mb-3">
+	  <input name="title" type="text" class="form-control" placeholder="title" aria-label="title" aria-describedby="basic-addon2">
+	</div>
+
+	<div class="input-group mb-3">
+		<select name="tags" class="form-select" aria-label="Default select example">
+		  <option value="others">Select tag (Others is default)</option>
+		  <option value="jokes">Jokes</option>
+		  <option value="technology">Technology</option>
+		  <option value="news">News</option>
+		  <option value="ideas">Ideas</option>
+		  <option value="random">Random</option>
+		  <option value="others">Others</option>
+		</select>
+	</div>
+
+
+	<div class="input-group">
+  		<span class="input-group-text">Your thoughts</span>
+  		<textarea name="tpostBody" class="form-control" aria-label="With textarea"></textarea>
+	</div>
+<br>
+	<button type="submit" class="btn btn-success"> Share</button>
+</form>
+</div>
+
+
+<%- include('partials/footer') %>

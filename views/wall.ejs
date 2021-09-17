@@ -1,0 +1,20 @@
+<%- include('partials/header') %>
+<div class="container">
+   <ol>
+      <% for (const element of tpost_data) { %>
+      <li>
+         <div class="card border-success mb-3 text-center inline" style="max-width: 18rem;">
+            <div class="card-header bg-transparent border-success">#<%= element.tags %></div>
+            <div class="card-body text-success">
+               <a href="/wall/<%=element._id%>">
+                  <h5 class="card-title"><%= element.title %></h5>
+               </a>
+               <p class="card-text"><%= element.tpostBody %></p>
+            </div>
+            <div class="card-footer bg-transparent border-success"><%= element.date %></div>
+         </div>
+      </li>
+      <% } %>
+   </ol>
+</div>
+<%- include('partials/footer') %>
