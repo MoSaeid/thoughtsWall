@@ -1,4 +1,5 @@
 <%- include('partials/header') %>
+<br>
 <div class="container">
    <% for(element of tpostByTag) { %>
    <div class="card text-center">
@@ -6,7 +7,7 @@
          <%=tg%>
       </div>
       <div class="card-body">
-         <h5 class="card-title"><%=element.title%></h5>
+         <h5 class="card-title"><a href="/wall/<%=element._id%>"><%=element.title%></a></h5>
          <p class="card-text"><%=element.tpostBody%>
          </p>
       </div>
@@ -14,6 +15,8 @@
          Published at: <%=element.date%>
       </div>
    </div>
+         <br>
+
 <% } %>
 </div>
 <%- include('partials/footer') %>
