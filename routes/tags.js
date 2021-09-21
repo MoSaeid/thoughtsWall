@@ -4,20 +4,21 @@ const Tpost = require('../models/tpost');
 const Comment = require('../models/comment');
 
 router.get('/', (req, res) => {
-	const tagsArray = ["jokes",
-"technology",
-"news",
-"ideas",
-"random",
-"others"]
+			const tagsArray = ["jokes",
+		"technology",
+		"news",
+		"ideas",
+		"random",
+		"others"]
 
 	res.render('tags', {tagsArray})
 })
 
-router.get('/:tagID', (req, res) => {
+router.get('/:tagID', async (req, res) => {
 	const tg = req.params.tagID;
-	res.render('viewtag', {tg})
-})
+	const tpostByTag = await Tpost.find({ tags: tg });
 
+	res.render('viewtag', {tg, tpostByTag})
+})
 
 module.exports = router;

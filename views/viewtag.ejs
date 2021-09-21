@@ -1,17 +1,19 @@
 <%- include('partials/header') %>
 <div class="container">
+   <% for(element of tpostByTag) { %>
    <div class="card text-center">
       <div class="card-header">
          <%=tg%>
       </div>
       <div class="card-body">
-         <h5 class="card-title"><%=tg%></h5>
-         <p class="card-text"><%=tg%>
+         <h5 class="card-title"><%=element.title%></h5>
+         <p class="card-text"><%=element.tpostBody%>
          </p>
       </div>
       <div class="card-footer text-muted">
-         Published at: <%=tg%>
+         Published at: <%=element.date%>
       </div>
    </div>
+<% } %>
 </div>
 <%- include('partials/footer') %>
