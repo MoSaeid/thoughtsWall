@@ -5,11 +5,9 @@ const commentSchema = new Schema({
     commentBody: {
         type: String,
         required: true
-    },
-    date: {
-        type: Date,
-        default: Date.now(),
     }
 });
+
+commentSchema.set('timestamps', true);
 
 module.exports = mongoose.model('Comment', commentSchema);
