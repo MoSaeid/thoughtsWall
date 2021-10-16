@@ -6,24 +6,20 @@ const tpostSchema = new Schema({
         type: String,
         required: true
     },
-
-    date: {
-        type: Date,
-        default: Date.now(),
-    },
-
     tags: {
         type: String,
         enum: ['jokes', 'technology', 'news', 'ideas', 'random', 'others'],
         default: 'others'
     },
-
-    tpostBody: String,
-
+    tpostBody: {
+        type: String
+    },
     comments: [{
         type: Schema.Types.ObjectId,
         ref: 'Comment'
     }]
-})
+});
+
+tpostSchema.set('timestamps', true);
 
 module.exports = mongoose.model('Tpost', tpostSchema);
